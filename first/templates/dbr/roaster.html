@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "dbr/base.html" %}
+
+  {% block body_block %}
+
+
+    <div class="roaster">
+      <h2>DBA Roaster</h2>
+    {% if roaster %}
+
+      {% for d in roaster %}
+      <h4>Date - {{d.date}}</h4>
+      <h4>Day - {{d.day}}</h4>
+
+      <!--<p>Deepak Nanaware - {{d.deepak}}</p>
+      <p>Nainesh More - {{d.nainesh}}</p>
+      <p>Akhilesh Tiwari - {{d.akhilesh}}</p>
+      <p>Gaurav Kadam - {{d.gaurav}}</p>
+      <p>Pranav Morwal - {{d.pranav}}</p>
+      <p>Prashant Patil - {{d.prashant}}</p>
+      <p>Rohan Nikam - {{d.rohan}}</p>
+      <p>Shreeyash Dange - {{d.shreeyash}}</p>
+      <p>Ankit Kadam - {{d.ankit}}</p>
+      <p>Ashvini Jadhav - {{d.ashvini}}</p>
+      <p>Kripa Pathak - {{d.kripa}}</p>
+      <p>Siddesh Tambde - {{d.siddesh}}</p>
+      <p>Biki Adak - {{d.biki}}</p>
+      <p>Sumit Duduskar - {{d.sumit}}</p>
+      <p>Mrunal Pallempati - {{d.mrunal}}</p>
+      <p>Pritam Bhalerao - {{d.pritam}}</p>-->
+      <div class="roaster">
+        <table id="roaster1">
+          <thead><th>Name</th><th>Shift</th><th>Contact</th></thead>
+          <tr><td>Deepak Nanaware</td><td>{{d.deepak}}</td><td><a href="https://wa.me/919699706619">+91 9699706619</a></td></tr>
+  	      <tr><td>Nainesh More</td><td>{{d.nainesh}}</td><td><a href="https://wa.me/919403112656">+91 9403112656</a></td></tr>
+  	      <tr><td>Akhilesh Tiwari</td><td>{{d.akhilesh}}</td><td><a href="https://wa.me/918329304912">+91 8329304912</a></td></tr>
+  	      <tr><td>Gaurav Kadam</td><td>{{d.gaurav}}</td><td><a href="https://wa.me/919870484838">+91 9870484838</a></td></tr>
+  	      <tr><td>Pranav Morwal</td><td>{{d.pranav}}</td><td><a href="https://wa.me/917588886186">+91 7588886186</a></td></tr>
+  	      <tr><td>Prashant Patil</td><td>{{d.prashant}}</td><td><a href="https://wa.me/919860360495">+91 9860360495</a></td></tr>
+  	      <tr><td>Rohan Nikam</td><td>{{d.rohan}}</td><td><a href="https://wa.me/919665399646">+91 9665399646</a></td></tr>
+  	      <tr><td>Shreeyash Dange</td><td>{{d.shreeyash}}</td><td><a href="https://wa.me/918452924821">+91 8452924821</a></td></tr>
+  	      <tr><td>Ankit Kadam</td><td>{{d.ankit}}</td><td><a href="https://wa.me/918356863366">+91 8356863366</a></td></tr>
+  	      <tr><td>Ashvini Jadhav</td><td>{{d.ashvini}}</td><td><a href="#">+91 8379987190</a></td></tr>
+  	      <tr><td>Kripa Pathak</td><td>{{d.kripa}}</td><td><a href="#">+91 8369564416</a></td></tr>
+  	      <tr><td>Siddesh Tambde</td><td>{{d.siddesh}}</td><td><a href="https://wa.me/918779656236">+91 8779656236</a></td></tr>
+  	      <tr><td>Biki Adak</td><td>{{d.biki}}</td><td><a href="https://wa.me/919619386633">+91 9619386633</a></td></tr>
+  	      <tr><td>Sumit Duduskar</td><td>{{d.sumit}}</td><td><a href="https://wa.me/917208441709">+91 7208441709</a></td></tr>
+  	      <tr><td>Mrunal Pallempati</td><td>{{d.mrunal}}</td><td><a href="https://wa.me/919004963174">+91 9004963174</a></td></tr>
+  	      <tr><td>Pritam Bhalerao</td><td>{{d.pritam}}</td><td><a href="https://wa.me/919594133129">+91 9594133129</a></td></tr>
+        </table>
+      </div>
+
+
+      {% endfor %}
+
+    {% else %}
+    <p>No Record Found</p>
+    {% endif %}
+    </div>
+  {% endblock %}

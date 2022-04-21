@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{% extends "dbr/base.html" %}
+
+{% block body_block %}
+
+<div id='date' class="jumbotron">
+  <h4>Choose a Date</h4>
+
+  <form class="" action="{% url 'dbr:roaster' %}" method="post">
+    {% csrf_token %}
+
+    {{ date_form.as_p }}
+    <p><input type="submit" name="" value="VIEW"></p>
+  </form>
+
+</div>
+
+{% endblock %}

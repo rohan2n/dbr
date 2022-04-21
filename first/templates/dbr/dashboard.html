@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "dbr/base.html" %}
+
+  {% block body_block %}
+    <div class="users">
+      <h1>DBA Roaster</h1>
+      <h4><a href="{% url 'dbr:date' %}"><input type="submit" name="view_date" value="View by Date"></a></h4>
+
+      <div class="user">
+
+      {% if user_list %}
+      <table id="user1">
+        <thead>
+          <th>User ID</th>
+          <th>User Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </thead>
+
+        {% for d in user_list %}
+        <tr>
+          <td>{{d.id}}</td>
+          <td>{{d.username}}</td>
+          <td>{{d.first_name}}</td>
+          <td>{{d.last_name}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      {% else %}
+      <p>No Record Found</p>
+      {% endif %}
+      </div>
+
+    </div>
+
+  {% endblock %}

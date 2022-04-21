@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% extends "dbr/base1.html" %}
+
+{% block body_block %}
+
+<div id='login' class="jumbotron">
+  <h2>LOGIN</h2>
+
+  <form class="" action="{% url 'dbr:login' %}" method="post">
+    {% csrf_token %}
+
+    <p><label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Enter Username"></p>
+    <p><label for="password">Password:</label>
+    <input type="password" name="password" value=""></p>
+    <p><input type="submit" name="" value="LOGIN"></p>
+  </form>
+
+</div>
+
+{% endblock %}
